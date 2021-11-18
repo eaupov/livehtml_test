@@ -1,0 +1,280 @@
+html {
+    font-size: 62.5%;
+    @media (max-width: 768px){
+        font-size: 50%;
+    }
+    @media (max-width: 550px){
+        font-size: 40%;
+    }
+}
+
+body{
+    height: 300px;
+    margin: 0;
+    font-family: "Roboto-Regular";
+}
+
+header{
+    display: block;
+    padding: 1.5rem 0 0 0;
+}
+
+.container{
+    width: 117rem;
+    margin: 0 auto;
+}
+
+.grid{
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+    grid-column-gap: 0px;
+    grid-row-gap: 0px;
+    width:100%;
+    margin: 0 auto 2.8rem;
+}
+
+
+.logo{
+    background: url('../img/logo.png') no-repeat center top;
+    width: 21rem;
+    height: 13.1rem;
+    display: block;
+    position: relative;
+}
+
+.grid-item1 {
+    grid-area: 1 / 1 / 3 / 2;
+    padding: 0.5rem 0 0 0;
+}
+
+.grid-item2 {
+    grid-area: 1 / 2 / 2 / 6;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    border-bottom: 1px solid #d7d7d7;
+    height: 23px;
+    margin-left: 0.5rem;
+}
+
+.nav_top a{
+    font-size: 1.2rem;
+    color: #252525;
+    text-decoration: none;
+    margin-right: 1.75rem;
+    letter-spacing: 0.01rem;
+}
+
+.nav_top.end a{
+    margin-right: 0;
+}
+
+.nav_top.end a:after{
+    content: "|";
+    margin: 0 1rem;
+}
+
+.nav_top.end a:last-child{
+    margin-right: 0;
+}
+
+.nav_top.end a:last-child:after{
+    content: "";
+    margin: 0;
+}
+
+.grid-item3 {
+    grid-area: 2 / 3 / 3 / 4;
+    margin-top: -2.4rem;
+    padding-left: 5.5rem;
+}
+
+.menu_cart{
+    display: flex;
+    flex-direction: column;
+}
+
+.menu_cart a{
+    font-size: 1.2rem;
+    color: #252525;
+    padding-left: 3rem;
+    position: relative;
+    margin-bottom: 1rem;
+}
+
+.menu_cart a::before{
+    content: "";
+    background-repeat: no-repeat;
+    background-position: left center;
+    position: absolute;
+    left: 0;
+}
+
+.menu_cart a.cart{
+    font-size: 1.4rem;
+}
+
+.menu_cart a.cart::before{
+    background-image: url('../img/ico_cart.png');
+    width: 19px;
+    height: 18px;
+}
+
+.menu_cart a.favorites::before{
+    background-image: url('../img/ico_star.png');
+    width: 15px;
+    height: 15px;
+    left: 5px;
+}
+
+.menu_cart a.compare::before{
+    background-image: url('../img/ico_balance.png');
+    width: 18px;
+    height: 16px;
+    left: 3px;
+}
+
+.grid-item4 {
+    grid-area: 2 / 4 / 3 / 5;
+    margin: -2.4rem 0 0 -1.2rem;
+}
+
+.wrap_instruments{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.wrap_instruments .one_instruments{
+    border:1px solid #d9d9d9;
+    text-align: center;
+    width: 7rem;
+    height: 7rem;
+    margin-right: 6px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.wrap_instruments .one_instruments:nth-child(2){
+    margin: 0 -4px 0 -11px;
+}
+
+.wrap_instruments .one_instruments:last-child{
+    margin: 0 6px 0 -1px;
+}
+
+.grid-item5 {
+    grid-area: 2 / 5 / 3 / 6;
+    margin: -2.7rem 0 0 5.1rem;
+    color:#252525
+} 
+
+.wrap_time{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    font-size: 1.2rem;
+    margin-bottom: 1.1rem;
+}
+
+.wrap_time .title{
+    font-family: "Roboto-Bold";
+}
+
+.wrap_phone{
+    padding-bottom: 1.3rem;
+    border-bottom: 1px solid #d7d7d7;
+    margin-bottom: 0.2rem;
+}
+
+.wrap_phone a{
+    text-decoration: none;
+    font-family: "Roboto-Bold";
+    font-size: 2.5rem;
+    color:#252525;
+    letter-spacing: -0.7px;
+}
+
+.wrap_city{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.wrap_city .title{
+    font-size: 1.2rem;
+}
+
+.wrap_city .button a{
+    color: #333333;
+    position: relative;
+    padding-left: 12px;
+    font-size: 1.2rem;
+    text-decoration-style: dotted;
+}
+
+.wrap_city .button a:before{
+    content: "";
+    background: url('../img/ico_polygon.png') no-repeat left center;
+    width:8px;
+    height:9px;
+    display: block;
+    position: absolute;
+    left: 0;
+    top: 5px;
+}
+
+.wrap_menu{
+    -webkit-box-shadow: 0px 3px 7px 2px rgba(0, 0, 0, 0.15);
+    -moz-box-shadow: 0px 3px 7px 2px rgba(0, 0, 0, 0.15);
+    box-shadow: 0px 3px 7px 2px rgba(0, 0, 0, 0.15);
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    border-radius: 11px;
+    background: #252525;
+}
+
+.wrap_menu .search a{
+    display: block;
+    width: 3.9rem;
+    background: url('../img/ico_magn.png') no-repeat center center #ffcc00;;
+    height: 3.4rem;
+    border-radius: 8px 0 0 8px;
+}
+
+.wrap_menu .menu{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.wrap_menu .menu a{
+    font-size: 1.4rem;
+    color: #fff;
+    text-decoration: none;
+    font-family: "Roboto-Bold";
+    padding: 0.7rem 1.8rem 0.8rem;
+}
+
+.wrap_menu .menu a.active,
+.wrap_menu .menu a:hover{
+    color:#333;
+    background: #ffcc00;
+}
+
+.wrap_menu .sale a{
+    font-family: "Roboto-Bold";
+    font-size: 1.4rem;
+    color: #333;
+    text-transform: uppercase;
+    text-decoration: none;
+    padding: 0.7rem 1.7rem 0.8rem 1.4rem;
+    display: block;
+    letter-spacing: 0.2px;
+    background: #ffcc00;
+    border-radius: 0 8px 8px 0;
+}
