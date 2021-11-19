@@ -72,5 +72,11 @@ $(document).ready(function() {
         });
       }
     }
+
+    $(window).resize(function() {
+      $('.slider .slide').each(function () { 
+        $(this).removeClass('locked');
+      });
+    });
   });
 });
